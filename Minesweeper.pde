@@ -1,3 +1,5 @@
+
+
 import de.bezier.guido.*;
 public final static int NUM_ROWS = 20;
 public final static int NUM_COLS = 20;
@@ -17,7 +19,7 @@ void setup ()
     for(int r = 0; r< NUM_ROWS; r++)
       for(int c = 0; c< NUM_COLS; c++)
           buttons[r][c] = new MSButton(r,c); 
-    while( bombs.size() < 25){
+    while( bombs.size() < 20){
       setBombs();
     }
 }
@@ -43,11 +45,36 @@ public boolean isWon()
 }
 public void displayLosingMessage()
 {
-    //your code here
+    background(#88EDF0);
+    buttons[9][5].setLabel("G");
+    buttons[9][6].setLabel("A");
+    buttons[9][7].setLabel("M");
+    buttons[9][8].setLabel("E");
+    buttons[9][10].setLabel("O");
+    buttons[9][11].setLabel("V"); 
+    buttons[9][12].setLabel("E");
+    buttons[9][13].setLabel("R");
+    buttons[9][14].setLabel("!");
+
+   
 }
 public void displayWinningMessage()
 {
-    //your code here
+    buttons[8][7].setLabel("C");
+    buttons[8][7].setLabel("O");
+    buttons[8][7].setLabel("N");
+    buttons[8][7].setLabel("G");
+    buttons[8][7].setLabel("R");
+    buttons[8][7].setLabel("A");
+    buttons[8][7].setLabel("T");
+    buttons[8][7].setLabel("S");
+    buttons[9][6].setLabel("Y");
+    buttons[9][7].setLabel("O");
+    buttons[9][8].setLabel("U");
+    buttons[9][10].setLabel("W");
+    buttons[9][11].setLabel("I");
+    buttons[9][12].setLabel("N");
+    
 }
 
 public class MSButton
