@@ -40,7 +40,11 @@ public void draw ()
 }
 public boolean isWon()
 {
-    //your code here
+    for(int i=0; i< bombs.size();i++){
+      if(bombs.get(i).isMarked()== true){
+        return true;
+      }
+    }
     return false;
 }
 public void displayLosingMessage()
