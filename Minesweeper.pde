@@ -1,5 +1,6 @@
 
 
+
 import de.bezier.guido.*;
 public final static int NUM_ROWS = 20;
 public final static int NUM_COLS = 20;
@@ -40,11 +41,14 @@ public void draw ()
 }
 public boolean isWon()
 {
+    int num = 0;
     for(int i=0; i< bombs.size();i++){
       if(bombs.get(i).isMarked()== true){
-        return true;
+          num = num + 1;
       }
     }
+    if( num == 20)
+      return true;
     return false;
 }
 public void displayLosingMessage()
@@ -64,14 +68,6 @@ public void displayLosingMessage()
 }
 public void displayWinningMessage()
 {
-    buttons[8][7].setLabel("C");
-    buttons[8][7].setLabel("O");
-    buttons[8][7].setLabel("N");
-    buttons[8][7].setLabel("G");
-    buttons[8][7].setLabel("R");
-    buttons[8][7].setLabel("A");
-    buttons[8][7].setLabel("T");
-    buttons[8][7].setLabel("S");
     buttons[9][6].setLabel("Y");
     buttons[9][7].setLabel("O");
     buttons[9][8].setLabel("U");
