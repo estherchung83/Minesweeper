@@ -30,7 +30,7 @@ public void setBombs()
     int r = (int)(Math.random()* NUM_ROWS);
     int c = (int)(Math.random()* NUM_COLS);
     bombs.add(buttons[r][c]);
-    System.out.println(r+ "," + c);
+    //System.out.println(r+ "," + c);
 }
 
 public void draw ()
